@@ -10,8 +10,8 @@ def connection(host,pass):
 	ssh_newkey = 'Are you sure you want to continue connecting'
 	# my ssh command line
 	cmd = 'ssh ' + 'satyavak@'+host
-	pass = 'System!23'
-	p=pexpect.spawn('ssh satyavak@ops-dev2.sv4.ironport.com uname -a')
+	pass = 'test'
+	p=pexpect.spawn('ssh satya@localhost uname -a')
 	i=p.expect([ssh_newkey,'password:',pexpect.EOF])
 	if i==0:
 	    print "I say yes"
